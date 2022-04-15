@@ -1,0 +1,75 @@
+ <html>
+    <head>
+        <title> Calculator</title>
+        <style>  
+            .my_button {
+                width:50px;
+                height:50px;
+                margin: auto;
+                margin-bottom: 10px;
+                margin-top: 10px;
+            }
+        </style>  <!-- CSS -->
+        <script>
+            function cal (operation){
+                //+ - * /
+                var x = document.getElementById("X").value;
+                console.log(typeof x);
+                x = parseFloat(x);
+                var y = document.getElementById("Y").value;
+                y = parseFloat(y);
+                var z = document.getElementById("Z");
+                switch(operation){
+                    case '+' : 
+                        z.innerHTML = x+y;
+                    break;
+                    case '-' : 
+                    z.innerHTML = x-y;
+                    break;
+                    case '*' : 
+                    z.innerHTML = x*y;
+                    break;
+                    case '/' : 
+                    if (y !== 0)
+                        z.innerHTML = x/y;
+                        else 
+                        alert("div by zero !!!");
+                    break;
+                }
+            }
+        </script> <!-- JS -->
+    </head>
+    <body>
+        <div>
+            <h1 style="text-align: center;"> Calculator</h1>
+        </div>
+        <div style="display:flex;">
+            <div id="left"
+            style="display: flex; flex-direction: column;
+                    width: 30%;">
+                <button onclick="cal('+')" class="my_button"> + </button>
+                <button onclick="cal('-')" class="my_button"> - </button>
+                <button onclick="cal('*')" class="my_button"> * </button>
+                <button onclick="cal('/')" class="my_button"> / </button>
+            </div>
+
+            <div id="right" style="display: flex; flex-direction: column;
+            width: 70%;">
+                <div style="display:flex; margin: 0 0 40px 0;">
+                    <div style="width:50%;">
+                        <p>X</p>
+                        <input id = "X" type="number"> 
+                    </div>
+                    <div style="width:50%;">
+                        <p>Y</p>
+                        <input id = "Y" type="number"> 
+                    </div>
+                </div>    
+                <div>
+                    <span> Result = </span>
+                    <span id="Z"></span>
+                </div>
+        </div>
+        </div>
+    </body>
+</html>

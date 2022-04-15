@@ -1,0 +1,30 @@
+/* Place your CSS styles in this file */
+
+
+body{
+    background-image: url("b2.jpg");
+        background-size: cover;
+}
+h1 {
+    height: 10vmax;
+    font-size: 4vmax;
+    line-height: 10vmax;
+    width: 100%;
+    text-align: center;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: normal;
+    color: darkmagenta;
+    background-color: white;
+}
+
+
+.BUTTON {
+        background-color: darkmagenta;
+    border-radius: 10px;
+    height: 6vmax;
+    width: 40vmax;
+    margin: 2vmin;
+    font-size: 3vmax;
+    font-weight: bold;
+    color: white;
+}
